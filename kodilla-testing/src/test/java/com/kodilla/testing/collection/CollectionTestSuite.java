@@ -26,11 +26,10 @@ public class CollectionTestSuite {
         //Given
         ArrayList<Integer> numbers = new ArrayList<>();
         //When
-        OddNumbersExterminator listOfNumbers = new OddNumbersExterminator();
+        OddNumbersExterminator listDivider = new OddNumbersExterminator();
+        ArrayList<Integer> oddNumbers = listDivider.exterminate(numbers);
         //Then
-        if (numbers.isEmpty()){
-            listOfNumbers.exterminate(numbers);
-        }
+        Assert.assertEquals(oddNumbers, numbers);
     }
     @Test
     public void testOddNumbersExterminatorNormalList(){
@@ -43,8 +42,9 @@ public class CollectionTestSuite {
         numbers.add(20);
         numbers.add(7);
         //When
-        OddNumbersExterminator listOfNumbers = new OddNumbersExterminator();
+        OddNumbersExterminator listDivider = new OddNumbersExterminator();
+        ArrayList<Integer> oddNumbers = listDivider.exterminate(numbers);
         //Then
-        listOfNumbers.exterminate(numbers);
+        Assert.assertNotEquals(oddNumbers, numbers);
     }
 }
