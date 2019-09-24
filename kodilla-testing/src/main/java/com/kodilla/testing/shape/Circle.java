@@ -15,4 +15,12 @@ public class Circle implements Shape {
     public String getShapeName(){
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
