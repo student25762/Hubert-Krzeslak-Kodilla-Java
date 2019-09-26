@@ -12,9 +12,21 @@ public class ForumStatistics {
         this.numberOfForumUsers = statistics.usersNames().size();
         this.numberOfForumPosts = statistics.postsCount();
         this.numberOfForumComments = statistics.commentsCount();
-        this.averagePostsPerUser = statistics.postsCount() / statistics.usersNames().size() + 1;
-        this.averageCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size() + 1;
-        this.averageCommentsPerPost = statistics.commentsCount() / statistics.postsCount() + 1;
+        if(statistics.usersNames().size() == 0){
+            this.averagePostsPerUser = 0;
+        } else {
+            this.averagePostsPerUser = statistics.postsCount() / statistics.usersNames().size();
+        }
+        if(statistics.usersNames().size() == 0){
+            this.averageCommentsPerUser = 0;
+        } else {
+            this.averageCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
+        }
+        if(statistics.postsCount() == 0){
+            this.averageCommentsPerPost = 0;
+        } else {
+            this.averageCommentsPerPost = statistics.commentsCount() / statistics.postsCount();
+        }
     }
 
     public int getNumberOfForumUsers() {

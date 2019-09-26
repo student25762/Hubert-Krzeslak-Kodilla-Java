@@ -9,27 +9,27 @@ import java.util.List;
 public class ForumStatisticsTestSuite {
 
     @Test
-    public void testForumStatisticsNumberOfUsersIsZero(){
+    public void testAvgPostsPerUser(){
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-        List<String> forumUsersNames = new ArrayList<String>();
-        when(statisticsMock.usersNames()).thenReturn(forumUsersNames);
+
+        List<String> users = new ArrayList<String>();
+        for(int i=0; i<100; i++) {
+            users.add("user" + i);
+        }
+        List<String> posts = new ArrayList<String>();
+        for(int i=0; i<1000; i++) {
+            posts.add("comment" + i);
+        }
+        when(statisticsMock.usersNames()).thenReturn(users);
+        when(statisticsMock.postsCount()).thenReturn(posts.size());
+
         ForumStatistics forumStatistics = new ForumStatistics();
+
         //When
-        int numberOfUsers = 0;
+        double avg = forumStatistics.getAveragePostsPerUser();
+
         //Then
-        Assert.assertEquals(numberOfUsers, forumUsersNames.size());
-    }
-    @Test
-    public void testForumStatisticsNumberOfUsersIsHundred(){
-        //Given
-        Statistics statisticsMock = mock(Statistics.class);
-        List<String> forumUsersNames = new ArrayList<String>();
-        when(statisticsMock.usersNames()).thenReturn(forumUsersNames);
-        ForumStatistics forumStatistics = new ForumStatistics();
-        //When
-        int numberOfUsers = 100;
-        //Then
-        Assert.assertNotEquals(numberOfUsers, forumUsersNames.size());
+        Assert.assertEquals(10, avg);
     }
 }
