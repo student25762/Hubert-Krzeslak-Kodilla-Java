@@ -19,15 +19,21 @@ public class ForumStatisticsTestSuite {
         }
         List<String> posts = new ArrayList<String>();
         for(int i=0; i<1000; i++) {
-            posts.add("comment" + i);
+            posts.add("post" + i);
         }
+//        List<String> comments = new ArrayList<String>();
+//        for(int i=0; i<2000; i++) {
+//            comments.add("comment" + i);
+//        }
+
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(posts.size());
-
-        ForumStatistics forumStatistics = new ForumStatistics();
+//        when(statisticsMock.commentsCount()).thenReturn(comments.size());
 
         //When
-        double avg = forumStatistics.getAveragePostsPerUser();
+        int numberOfUsers = statisticsMock.usersNames().size();
+        int numberOfPosts = statisticsMock.postsCount();
+        int avg = numberOfPosts / numberOfUsers;
 
         //Then
         Assert.assertEquals(10, avg);
