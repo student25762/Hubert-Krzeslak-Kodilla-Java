@@ -4,9 +4,9 @@ public class ForumStatistics {
     private int numberOfForumUsers;
     private int numberOfForumPosts;
     private int numberOfForumComments;
-    private double averagePostsPerUser;
-    private double averageCommentsPerUser;
-    private double averageCommentsPerPost;
+    private int averagePostsPerUser;
+    private int averageCommentsPerUser;
+    private int averageCommentsPerPost;
 
     public void calculateAdvStatistics(Statistics statistics){
         this.numberOfForumUsers = statistics.usersNames().size();
@@ -41,15 +41,15 @@ public class ForumStatistics {
         return numberOfForumComments;
     }
 
-    public double getAveragePostsPerUser() {
+    public int getAveragePostsPerUser() {
         return averagePostsPerUser;
     }
 
-    public double getAverageCommentsPerUser() {
+    public int getAverageCommentsPerUser() {
         return averageCommentsPerUser;
     }
 
-    public double getAverageCommentsPerPost() {
+    public int getAverageCommentsPerPost() {
         return averageCommentsPerPost;
     }
 }
