@@ -1,26 +1,23 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.beautifier.PoemBeautifier;
-import com.kodilla.stream.beautifier.PoemDecorator;
-import com.kodilla.stream.iterate.NumbersGenerator;
-import com.kodilla.stream.lambda.*;
-import com.kodilla.stream.reference.FunctionalCalculator;
 
-import java.net.FileNameMap;
+import com.kodilla.stream.forumuser.Forum;
+import com.kodilla.stream.forumuser.ForumUser;
+
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StreamMain {
     public static void main(String []args) {
-        System.out.println("Welcome to module 7 - Stream");
+        Forum forum = new Forum();
+        Map<Integer, ForumUser> resultMap = forum.getUserList().stream()
+                .filter(user -> user.getNumberOfPosts() > 0)
+                .filter(user -> user.getSex() == 'M')
+                .filter(user -> user.getDateOfBirth().getYear() <= 1999)
+                .collect(Collectors.toMap(ForumUser::getUserID, user -> user));
 
-        PoemBeautifier poemBeautifier = new PoemBeautifier();
-        poemBeautifier.beautify("This is an example text", textToDecorate -> textToDecorate.toUpperCase());
-        poemBeautifier.beautify("This is an example text", textToDecorate -> "ABC " + textToDecorate + " ABC");
-        poemBeautifier.beautify("This is an example text", textToDecorate -> textToDecorate.replace("s", "$"));
-        poemBeautifier.beautify("This is an example text", textToDecorate -> textToDecorate.toLowerCase());
-
-
-        System.out.println("Using Stream to generate even numbers");
-        NumbersGenerator.generateEven(20);
+        resultMap.entrySet().stream()
+                .forEach(System.out::println);
 
     }
 }
