@@ -22,10 +22,10 @@ public class World {
     }
 
     public BigDecimal getPeopleQuantity(){
-        BigDecimal peopleQuantity = listOfContinents.stream()
+        return listOfContinents.stream()
                 .flatMap(continent -> continent.getListOfCountriesOnContinent().stream())
-                .reduce(BigDecimal.ZERO, (sum, current) -> sum.getPeopleQuantity().add(current);
-        return peopleQuantity;
+                .map(Country::getPeopleQuantity)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
 }
