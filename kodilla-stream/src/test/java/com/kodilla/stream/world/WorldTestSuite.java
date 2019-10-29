@@ -37,6 +37,5 @@ public class WorldTestSuite {
         BigDecimal expectedTotalPopulation = new BigDecimal("3395");
         Assert.assertEquals(3, world.getListOfContinents().size());
         Assert.assertEquals(expectedTotalPopulation, world.getPeopleQuantity());
-
     }
 }
