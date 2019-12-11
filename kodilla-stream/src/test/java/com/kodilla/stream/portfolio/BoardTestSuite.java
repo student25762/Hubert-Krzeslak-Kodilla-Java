@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -143,9 +144,9 @@ public class BoardTestSuite {
         double avgOnTaskTime = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .mapToDouble(d -> d.getDeadline().compareTo(d.getCreated()))
+                .mapToDouble(d -> d.getCreated().until(LocalDate.now(), ChronoUnit.DAYS))
                 .average().getAsDouble();
         //Then
-        Assert.assertEquals(2.3, avgOnTaskTime, 0.1);
+        Assert.assertEquals(10, avgOnTaskTime, 0.1);
     }
 }
