@@ -4,12 +4,13 @@ import com.kodilla.good.patterns.challenges.MovieStore;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.stream.*;
 
 public class Main {
     public static void main(String[] args){
         MovieStore movieStore = new MovieStore();
-        movieStore.getMovies().forEach((String s) -> System.out.println(s);
+        Map<String, List<String>> movies = movieStore.getMovies();
+        List<String> result = movies.values().stream()
+                .flatMap(s -> s.stream().
+
     }
 }
