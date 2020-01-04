@@ -18,9 +18,9 @@ public class CalculatorTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
         //When
-        calculator.add(2.0, 2.0);
+        double result = calculator.add(10.0, 5.0);
         //Then
-        //Show result
+        Assert.assertEquals(15, result, 0);
     }
 
     @Test
@@ -29,9 +29,9 @@ public class CalculatorTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
         //When
-        calculator.sub(10.0, 3.5);
+        double result = calculator.sub(10.0, 5.0);
         //Then
-        //Show result
+        Assert.assertEquals(5, result,0);
     }
 
     @Test
@@ -40,9 +40,9 @@ public class CalculatorTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
         //When
-        calculator.multi(10.0, 3.5);
+        double result = calculator.multi(10.0, 5.0);
         //Then
-        //Show result
+        Assert.assertEquals(50, result, 0);
     }
 
     @Test
@@ -51,8 +51,8 @@ public class CalculatorTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Calculator calculator = context.getBean(Calculator.class);
         //When
-        calculator.divide(10.0, 3.5);
+        double result = calculator.divide(10.0, 5.0);
         //Then
-        //Show result
+        Assert.assertEquals(2, result, 0);
     }
 }
