@@ -63,7 +63,7 @@ public final class TaskList {
         return tasks;
     }
 
-    public void setTasks(List<Task> tasks) {
+    private void setTasks(List<Task> tasks) {
         this.tasks = tasks;
     }
 }
