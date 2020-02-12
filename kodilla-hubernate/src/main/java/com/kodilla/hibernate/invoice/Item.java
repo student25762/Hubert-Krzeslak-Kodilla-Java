@@ -31,6 +31,8 @@ public class Item {
         return id;
     }
 
+    @ManyToOne
+    @JoinColumn(name ="PRODUCT_ID")
     public Product getProduct() {
         return product;
     }
