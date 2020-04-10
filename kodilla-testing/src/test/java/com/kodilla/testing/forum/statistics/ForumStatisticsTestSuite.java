@@ -1,4 +1,5 @@
 package com.kodilla.testing.forum.statistics;
+
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -10,12 +11,12 @@ import static org.mockito.Mockito.when;
 public class ForumStatisticsTestSuite {
 
     @Test
-    public void test1(){
+    public void test1() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> users = new ArrayList<String>();
-        for(int i=0;i<100;i++){
-            users.add("User"+i);
+        for (int i = 0; i < 100; i++) {
+            users.add("User" + i);
         }
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(1000);
@@ -26,8 +27,9 @@ public class ForumStatisticsTestSuite {
         //Then
         Assert.assertEquals(10, avg);
     }
+
     @Test
-    public void test2(){
+    public void test2() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> users = new ArrayList<String>();
@@ -40,13 +42,14 @@ public class ForumStatisticsTestSuite {
         //Then
         Assert.assertEquals(0, avg);
     }
+
     @Test
-    public void test3(){
+    public void test3() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> users = new ArrayList<String>();
-        for(int i=0;i<100;i++){
-            users.add("User"+i);
+        for (int i = 0; i < 100; i++) {
+            users.add("User" + i);
         }
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(0);
@@ -57,8 +60,9 @@ public class ForumStatisticsTestSuite {
         //Then
         Assert.assertEquals(0, avg);
     }
+
     @Test
-    public void test4(){
+    public void test4() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(100);
@@ -70,8 +74,9 @@ public class ForumStatisticsTestSuite {
         //Then
         Assert.assertTrue(result);
     }
+
     @Test
-    public void test5(){
+    public void test5() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(200);

@@ -8,17 +8,17 @@ import org.junit.Test;
 public class SettingFileEngineTestSuite {
 
     @BeforeClass
-    public static void openSettingFile(){
+    public static void openSettingFile() {
         SettingFileEngine.getInstance().open("myapp.settings");
     }
 
     @AfterClass
-    public static void closeSettingFile(){
+    public static void closeSettingFile() {
         SettingFileEngine.getInstance().close();
     }
 
     @Test
-    public void testGetFileName(){
+    public void testGetFileName() {
         //Given
         //When
         String fileName = SettingFileEngine.getInstance().getFileName();
@@ -28,7 +28,7 @@ public class SettingFileEngineTestSuite {
     }
 
     @Test
-    public void testLoadSettings(){
+    public void testLoadSettings() {
         //Given
         //When
         boolean result = SettingFileEngine.getInstance().loadSettings();
@@ -37,7 +37,7 @@ public class SettingFileEngineTestSuite {
     }
 
     @Test
-    public void testSaveSettings(){
+    public void testSaveSettings() {
         //Given
         //When
         boolean result = SettingFileEngine.getInstance().saveSettings();

@@ -11,7 +11,7 @@ public class Board extends Prototype {
         this.name = name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -26,22 +26,22 @@ public class Board extends Prototype {
     @Override
     public String toString() {
         String s = "Board [" + name + "]\n";
-        for(TaskList list : lists) {
+        for (TaskList list : lists) {
             s = s + list.toString() + "\n";
         }
         return s;
     }
 
-    public Board shallowCopy() throws CloneNotSupportedException{
-        return (Board)super.clone();
+    public Board shallowCopy() throws CloneNotSupportedException {
+        return (Board) super.clone();
     }
 
-    public Board deepCopy() throws CloneNotSupportedException{
-        Board cloneBoard = (Board)super.clone();
+    public Board deepCopy() throws CloneNotSupportedException {
+        Board cloneBoard = (Board) super.clone();
         cloneBoard.lists = new HashSet<>();
-        for(TaskList theList : lists){
+        for (TaskList theList : lists) {
             TaskList clonedList = new TaskList(theList.getName());
-            for(Task task : theList.getTasks()){
+            for (Task task : theList.getTasks()) {
                 clonedList.getTasks().add(task);
             }
             cloneBoard.getLists().add(clonedList);

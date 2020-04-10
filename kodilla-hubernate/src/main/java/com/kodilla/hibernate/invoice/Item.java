@@ -12,6 +12,7 @@ public class Item {
     private BigDecimal price;
     private int quantity;
     private BigDecimal value;
+    private Invoice invoice; // zrobić getter i manytoone nad polem invoice
 
     public Item() {
     }
@@ -32,7 +33,7 @@ public class Item {
     }
 
     @ManyToOne
-    @JoinColumn(name ="PRODUCT_ID")
+    @JoinColumn(name = "PRODUCT_ID")
     public Product getProduct() {
         return product;
     }

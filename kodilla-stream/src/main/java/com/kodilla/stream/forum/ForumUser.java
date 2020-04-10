@@ -11,17 +11,17 @@ public final class ForumUser {
     private String location;
     private final Set<ForumUser> friends = new HashSet<>();
 
-    public ForumUser(final String userName, final String realName, final String location){
+    public ForumUser(final String userName, final String realName, final String location) {
         this.userName = userName;
         this.realName = realName;
         this.location = location;
     }
 
-    public void addFriend(ForumUser forumUser){
+    public void addFriend(ForumUser forumUser) {
         friends.add(forumUser);
     }
 
-    public boolean removeFriend(ForumUser forumUser){
+    public boolean removeFriend(ForumUser forumUser) {
         return friends.remove(forumUser);
     }
 
@@ -41,13 +41,13 @@ public final class ForumUser {
         return friends;
     }
 
-    public Set<String> getLocationsOfFriends(){
+    public Set<String> getLocationsOfFriends() {
         return friends.stream()
                 .map(friends -> friends.getLocation())
                 .collect(Collectors.toSet());
     }
 
-    public Set<String> getLocationsOfFriendsOfFriends(){
+    public Set<String> getLocationsOfFriendsOfFriends() {
         return friends.stream()
                 .flatMap(user -> user.getFriends().stream())
                 .filter(user -> user != this)

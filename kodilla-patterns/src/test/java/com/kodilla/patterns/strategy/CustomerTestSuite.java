@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class CustomerTestSuite {
     @Test
-    public void testDefaultInvestStrategy(){
+    public void testDefaultInvestStrategy() {
         //Given
         Customer steven = new IndividualCustomer("Steven Morse");
         Customer john = new IndividualYoungCustomer("John Jobs");
@@ -28,7 +28,7 @@ public class CustomerTestSuite {
     }
 
     @Test
-    public void testIndividualStrategy(){
+    public void testIndividualStrategy() {
         //Given
         Customer john = new IndividualYoungCustomer("John Morse");
 

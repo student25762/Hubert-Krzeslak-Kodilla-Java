@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class SpringRunnerTestSuite {
 
     @Test
-    public void testCircleLoadedToContainer(){
+    public void testCircleLoadedToContainer() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Shape shape = context.getBean(Circle.class);
@@ -28,7 +28,7 @@ public class SpringRunnerTestSuite {
     }
 
     @Test
-    public void testTriangleLoadedToContainer(){
+    public void testTriangleLoadedToContainer() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Shape shape = context.getBean(Triangle.class);
@@ -40,7 +40,7 @@ public class SpringRunnerTestSuite {
     }
 
     @Test
-    public void testSquareLoadedIntoContainer(){
+    public void testSquareLoadedIntoContainer() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Shape shape = context.getBean(Square.class);
@@ -52,10 +52,10 @@ public class SpringRunnerTestSuite {
     }
 
     @Test
-    public void testShapeLoadedIntoContainer(){
+    public void testShapeLoadedIntoContainer() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Shape shape = (Shape)context.getBean("chosenShape");
+        Shape shape = (Shape) context.getBean("chosenShape");
         //When
         String name = shape.getShapeName();
         //Then

@@ -53,7 +53,7 @@ public class ForumUserTestSuite {
     }
 
     @Test
-    public void testGetLocationOfFriendsOfFriends(){
+    public void testGetLocationOfFriendsOfFriends() {
         //Given
         ForumUser user1 = new ForumUser("alan01", "Alan Kosovsky", "Washington");
         ForumUser user2 = new ForumUser("ethanreard", "Ethan Reard", "Miami");

@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 
 public class LibraryTestSuite {
     @Test
-    public void testGetBook(){
+    public void testGetBook() {
         //Given
         Library library = new Library("Library no. 1");
         IntStream.iterate(1, n -> n + 1)
@@ -16,18 +16,18 @@ public class LibraryTestSuite {
                 .forEach(n -> library.getBooks().add(new Book("Book no. " + n, "author", LocalDate.now())));
 
         Library cloneLibrary = null;
-        try{
+        try {
             cloneLibrary = library.shallowCopy();
             cloneLibrary.setName("library 2");
-        } catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
 
         Library deepCloneLibrary = null;
-        try{
+        try {
             deepCloneLibrary = library.deepCopy();
             deepCloneLibrary.setName("library 3");
-        } catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
 

@@ -9,11 +9,11 @@ public class World {
 
     private List<Continent> listOfContinents = new ArrayList<>();
 
-    public void addContinent(Continent continent){
+    public void addContinent(Continent continent) {
         listOfContinents.add(continent);
     }
 
-    public boolean removeContinent(Continent continent){
+    public boolean removeContinent(Continent continent) {
         return listOfContinents.remove(continent);
     }
 
@@ -21,7 +21,7 @@ public class World {
         return listOfContinents;
     }
 
-    public BigDecimal getPeopleQuantity(){
+    public BigDecimal getPeopleQuantity() {
         return listOfContinents.stream()
                 .flatMap(continent -> continent.getListOfCountriesOnContinent().stream())
                 .map(Country::getPeopleQuantity)

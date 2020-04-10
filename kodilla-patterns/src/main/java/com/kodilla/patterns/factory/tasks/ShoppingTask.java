@@ -12,12 +12,12 @@ public class ShoppingTask implements Task {
     }
 
     @Override
-    public void executeTask(){
+    public void executeTask() {
         System.out.println("Someone is shopping");
     }
 
     @Override
-    public String getTaskName(){
+    public String getTaskName() {
         return taskName;
     }
 
@@ -30,7 +30,7 @@ public class ShoppingTask implements Task {
     }
 
     @Override
-    public boolean isTaskExecuted(){
+    public boolean isTaskExecuted() {
         return false;
     }
 }

@@ -5,20 +5,20 @@ public class Triangle implements Shape {
     private double sideOfTriangle;
     private String name;
 
-    public Triangle(String name){
+    public Triangle(String name) {
         this.name = name;
     }
 
-    public Triangle(double heightOfTriangle, double sideOfTriangle){
+    public Triangle(double heightOfTriangle, double sideOfTriangle) {
         this.heightOfTriangle = heightOfTriangle;
         this.sideOfTriangle = sideOfTriangle;
     }
 
-    public void getField(){
+    public void getField() {
         System.out.println((heightOfTriangle * sideOfTriangle) / 2);
     }
 
-    public String getShapeName(){
+    public String getShapeName() {
         return name;
     }
 

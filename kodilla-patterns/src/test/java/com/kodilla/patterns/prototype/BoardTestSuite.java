@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 
 public class BoardTestSuite {
     @Test
-    public void testToString(){
+    public void testToString() {
         //Given
         TaskList listToDo = new TaskList("to do tasks");
         IntStream.iterate(1, n -> n + 1)
@@ -22,7 +22,7 @@ public class BoardTestSuite {
         TaskList listDoneTasks = new TaskList("Done tasks");
         IntStream.iterate(1, n -> n + 1)
                 .limit(10)
-                .forEach(n -> listDoneTasks.getTasks().add(new Task("Done task number: " + n )));
+                .forEach(n -> listDoneTasks.getTasks().add(new Task("Done task number: " + n)));
 
         Board board = new Board("Project number 1");
         board.getLists().add(listToDo);
@@ -30,10 +30,10 @@ public class BoardTestSuite {
         board.getLists().add(listDoneTasks);
 
         Board cloneBoard = null;
-        try{
+        try {
             cloneBoard = board.shallowCopy();
             cloneBoard.setName("Project number 2");
-        } catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
 
@@ -41,7 +41,7 @@ public class BoardTestSuite {
         try {
             deepClonedBoard = board.deepCopy();
             cloneBoard.setName("Project number 3");
-        } catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
 

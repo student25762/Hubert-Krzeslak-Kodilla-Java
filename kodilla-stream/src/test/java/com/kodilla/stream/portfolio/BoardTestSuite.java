@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class BoardTestSuite {
 
-    public Board prepareTestData(){
+    public Board prepareTestData() {
         //users
         User user1 = new User("developer1", "John Smith");
         User user2 = new User("projectmanager1", "Nina White");
@@ -74,7 +74,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskList(){
+    public void testAddTaskList() {
         //Given
         Board project = prepareTestData();
         //When
@@ -84,7 +84,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskListFindUsersTasks(){
+    public void testAddTaskListFindUsersTasks() {
         //Given
         Board project = prepareTestData();
         //When
@@ -100,7 +100,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskListFindOutdatedTasks(){
+    public void testAddTaskListFindOutdatedTasks() {
         //Given
         Board project = prepareTestData();
         //When
@@ -118,7 +118,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskListFindLongTasks(){
+    public void testAddTaskListFindLongTasks() {
         //Given
         Board project = prepareTestData();
         //When
@@ -135,7 +135,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskListAverageWorkingOnTask(){
+    public void testAddTaskListAverageWorkingOnTask() {
         //Given
         Board project = prepareTestData();
         //When

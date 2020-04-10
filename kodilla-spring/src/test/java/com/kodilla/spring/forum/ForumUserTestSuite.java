@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ForumUserTestSuite {
 
     @Test
-    public void testGetUserName(){
+    public void testGetUserName() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.forum");
         ForumUser forumUser = context.getBean(ForumUser.class);

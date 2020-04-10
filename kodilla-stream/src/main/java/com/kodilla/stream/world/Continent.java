@@ -15,18 +15,17 @@ public class Continent {
         return listOfCountriesOnContinent;
     }
 
-    public void addCountry(Country country){
+    public void addCountry(Country country) {
         listOfCountriesOnContinent.add(country);
     }
 
-    public boolean removeCountry(Country country){
+    public boolean removeCountry(Country country) {
         return listOfCountriesOnContinent.remove(country);
     }
 
-    public Continent(String continentName){
+    public Continent(String continentName) {
         this.continentName = continentName;
     }
-
 
 
 }

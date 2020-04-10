@@ -23,7 +23,7 @@ public class TaskListDaoTestSuite {
     private static final String LISTNAME = "List1";
 
     @Test
-    public void testFindByListName(){
+    public void testFindByListName() {
         //Given
         TaskList taskList = new TaskList("List1", "some description");
 

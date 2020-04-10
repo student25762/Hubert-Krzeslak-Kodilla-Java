@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public class WorldTestSuite {
     @Test
-    public void testGetPeopleQuantity(){
+    public void testGetPeopleQuantity() {
         //Given
         //Create 3 continents
         Continent europe = new Continent("Europe");

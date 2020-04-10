@@ -38,7 +38,7 @@ public final class ForumUser {
         return dateOfBirth;
     }
 
-    public int age(ForumUser forumUser){
+    public int age(ForumUser forumUser) {
         return LocalDate.now().getYear() - forumUser.getDateOfBirth().getYear();
     }
 

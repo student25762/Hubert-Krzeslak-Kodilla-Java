@@ -6,23 +6,27 @@ import java.util.ArrayList;
 
 public class CollectionTestSuite {
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test case begin!");
     }
+
     @After
-    public void after(){
+    public void after() {
         System.out.println("Test case end!");
     }
+
     @BeforeClass
-    public static void beforeClass(){
+    public static void beforeClass() {
         System.out.println("Test suite begin!");
     }
+
     @AfterClass
-    public static void afterClass(){
+    public static void afterClass() {
         System.out.println("Test suite end!");
     }
+
     @Test
-    public void testOddNumbersExterminatorEmptyList(){
+    public void testOddNumbersExterminatorEmptyList() {
         //Given
         ArrayList<Integer> numbers = new ArrayList<>();
         //When
@@ -31,8 +35,9 @@ public class CollectionTestSuite {
         //Then
         Assert.assertEquals(oddNumbers, numbers);
     }
+
     @Test
-    public void testOddNumbersExterminatorNormalList(){
+    public void testOddNumbersExterminatorNormalList() {
         //Given
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(5);

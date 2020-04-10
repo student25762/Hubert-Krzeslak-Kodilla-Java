@@ -7,23 +7,23 @@ public final class TaskList {
     private final List<Task> tasks = new LinkedList<>();
     private final String name;
 
-    public TaskList(final String name){
+    public TaskList(final String name) {
         this.name = name;
     }
 
-    public void addTask(Task task){
+    public void addTask(Task task) {
         tasks.add(task);
     }
 
-    public boolean removeTask(Task task){
+    public boolean removeTask(Task task) {
         return tasks.remove(task);
     }
 
-    public List<Task> getTasks(){
+    public List<Task> getTasks() {
         return new LinkedList<>(tasks);
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 

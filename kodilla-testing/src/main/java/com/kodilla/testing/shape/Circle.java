@@ -4,15 +4,15 @@ public class Circle implements Shape {
     private double radius;
     private String name = "circle";
 
-    public Circle(double radius){
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    public void getField(){
-        System.out.println(2*radius*Math.PI);
+    public void getField() {
+        System.out.println(2 * radius * Math.PI);
     }
 
-    public String getShapeName(){
+    public String getShapeName() {
         return name;
     }
 

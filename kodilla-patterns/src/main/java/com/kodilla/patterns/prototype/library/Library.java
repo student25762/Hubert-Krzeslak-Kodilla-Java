@@ -1,6 +1,7 @@
 package com.kodilla.patterns.prototype.library;
 
 import com.kodilla.patterns.prototype.Prototype;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +13,7 @@ public class Library extends Prototype {
         this.name = name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -25,13 +26,13 @@ public class Library extends Prototype {
     }
 
     public Library shallowCopy() throws CloneNotSupportedException {
-        return (Library)super.clone();
+        return (Library) super.clone();
     }
 
-    public Library deepCopy() throws CloneNotSupportedException{
-        Library cloneLibrary = (Library)super.clone();
+    public Library deepCopy() throws CloneNotSupportedException {
+        Library cloneLibrary = (Library) super.clone();
         cloneLibrary.books = new HashSet<>();
-        for(Book book : books){
+        for (Book book : books) {
             Book clonedBook = new Book(book.getAuthor(), book.getTitle(), book.getPublicationDate());
             cloneLibrary.getBooks().add(clonedBook);
         }

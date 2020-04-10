@@ -4,12 +4,13 @@ public class Logger {
     private static Logger logger = null;
     private String lasLog = "";
 
-    private Logger(){}
+    private Logger() {
+    }
 
-    public static Logger getInstance(){
-        if(logger == null){
-            synchronized (Logger.class){
-                if(logger == null){
+    public static Logger getInstance() {
+        if (logger == null) {
+            synchronized (Logger.class) {
+                if (logger == null) {
                     logger = new Logger();
                 }
             }
@@ -17,12 +18,12 @@ public class Logger {
         return logger;
     }
 
-    public void log(String log){
+    public void log(String log) {
         lasLog = log;
         System.out.println("Log: [" + log + "]");
     }
 
-    public String getLasLog(){
+    public String getLasLog() {
         return lasLog;
     }
 }

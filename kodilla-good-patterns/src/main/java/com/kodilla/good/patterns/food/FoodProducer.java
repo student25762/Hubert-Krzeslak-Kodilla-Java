@@ -19,11 +19,11 @@ public class FoodProducer {
         return product;
     }
 
-    public int getAmount(){
+    public int getAmount() {
         return amount;
     }
 
-    public void process(){
+    public void process() {
 
     }
 }

@@ -10,17 +10,17 @@ import static org.mockito.Mockito.*;
 
 public class BookDirectoryTestSuite {
 
-    private List<Book> generateListOfNBooks(int quantity){
+    private List<Book> generateListOfNBooks(int quantity) {
         List<Book> resultList = new ArrayList<Book>();
-        for(int n=1; n<=quantity; n++){
-            Book theBook = new Book("Title"+n, "Author"+n, 1970+n);
+        for (int n = 1; n <= quantity; n++) {
+            Book theBook = new Book("Title" + n, "Author" + n, 1970 + n);
             resultList.add(theBook);
         }
         return resultList;
     }
 
     @Test
-    public void testListBooksWithConditionsReturnList(){
+    public void testListBooksWithConditionsReturnList() {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -45,7 +45,7 @@ public class BookDirectoryTestSuite {
 
 
     @Test
-    public void testListBooksWithConditionMoreThen20(){
+    public void testListBooksWithConditionMoreThen20() {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -71,7 +71,7 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testListBooksWithConditionFragmentShorterThan3(){
+    public void testListBooksWithConditionFragmentShorterThan3() {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -89,7 +89,7 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testListBooksInHandsOf5(){
+    public void testListBooksInHandsOf5() {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -104,8 +104,9 @@ public class BookDirectoryTestSuite {
         //Then
         assertEquals(5, theListOf5Books.size());
     }
+
     @Test
-    public void testListBooksInHandsOf1(){
+    public void testListBooksInHandsOf1() {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -120,8 +121,9 @@ public class BookDirectoryTestSuite {
         //Then
         assertEquals(1, theListOf1Books.size());
     }
+
     @Test
-    public void testListBooksInHandsOf0(){
+    public void testListBooksInHandsOf0() {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);

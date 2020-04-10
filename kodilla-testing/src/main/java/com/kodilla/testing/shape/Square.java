@@ -5,16 +5,16 @@ public class Square implements Shape {
     private double sideOfSquareB;
     private String name = "square";
 
-    public Square(double sideOfSquareA, double sideOfSquareB){
+    public Square(double sideOfSquareA, double sideOfSquareB) {
         this.sideOfSquareA = sideOfSquareA;
         this.sideOfSquareB = sideOfSquareB;
     }
 
-    public void getField(){
+    public void getField() {
         System.out.println(sideOfSquareA * sideOfSquareB);
     }
 
-    public String getShapeName(){
+    public String getShapeName() {
         return name;
     }
 

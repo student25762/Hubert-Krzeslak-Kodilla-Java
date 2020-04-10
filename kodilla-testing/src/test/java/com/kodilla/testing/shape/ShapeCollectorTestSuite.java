@@ -1,26 +1,31 @@
 package com.kodilla.testing.shape;
+
 import org.junit.*;
 
 public class ShapeCollectorTestSuite {
 
     @BeforeClass
-    public static void beforeAllTests(){
+    public static void beforeAllTests() {
         System.out.println("Beginning of tests");
     }
+
     @AfterClass
-    public static void afterAllTests(){
+    public static void afterAllTests() {
         System.out.println("Tests are finished");
     }
+
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test case begin");
     }
+
     @After
-    public void after(){
+    public void after() {
         System.out.println("Test case end");
     }
+
     @Test
-    public void testCaseAddFigure(){
+    public void testCaseAddFigure() {
         //Given
         Shape triangle = new Triangle(12, 5.2);
         ShapeCollector collector = new ShapeCollector();
@@ -31,7 +36,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-        public void testCaseRemoveFigure(){
+    public void testCaseRemoveFigure() {
         //Given
         Shape triangle = new Triangle(12, 5.2);
         ShapeCollector collector = new ShapeCollector();
@@ -44,7 +49,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testCaseGetFigure(){
+    public void testCaseGetFigure() {
         //Given
         Shape triangle = new Triangle(12, 5.2);
         ShapeCollector collector = new ShapeCollector();
@@ -56,7 +61,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testCaseRemoveNotExistingFigure(){
+    public void testCaseRemoveNotExistingFigure() {
         //Given
         Shape triangle = new Triangle(12, 5.2);
         ShapeCollector collector = new ShapeCollector();

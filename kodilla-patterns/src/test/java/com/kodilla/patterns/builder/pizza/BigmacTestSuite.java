@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class BigmacTestSuite {
     @Test
-    public void testBuildBigmac(){
+    public void testBuildBigmac() {
         //Given
         Bigmac bigmac = new Bigmac.BigmacBuilder()
                 .setBun("sezam bun")

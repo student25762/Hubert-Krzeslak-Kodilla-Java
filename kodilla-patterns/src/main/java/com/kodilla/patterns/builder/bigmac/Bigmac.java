@@ -9,33 +9,33 @@ public final class Bigmac {
     private final String sauce;
     private final List<String> ingredients;
 
-    public static class BigmacBuilder{
+    public static class BigmacBuilder {
         private String bun;
         private int burgers;
         private String sauce;
         private List<String> ingredients = new ArrayList<>();
 
-        public BigmacBuilder setBun(String bun){
+        public BigmacBuilder setBun(String bun) {
             this.bun = bun;
             return this;
         }
 
-        public BigmacBuilder setBurgers(int burgers){
+        public BigmacBuilder setBurgers(int burgers) {
             this.burgers = burgers;
-            return  this;
+            return this;
         }
 
-        public BigmacBuilder setSauce(String sauce){
+        public BigmacBuilder setSauce(String sauce) {
             this.sauce = sauce;
             return this;
         }
 
-        public BigmacBuilder setIngredients(String ingredient){
+        public BigmacBuilder setIngredients(String ingredient) {
             ingredients.add(ingredient);
             return this;
         }
 
-        public Bigmac buildBigmac(){
+        public Bigmac buildBigmac() {
             return new Bigmac(bun, burgers, sauce, ingredients);
         }
     }
@@ -47,7 +47,7 @@ public final class Bigmac {
         this.ingredients = new ArrayList<>(ingredients);
     }
 
-    public List<String> getIngredients(){
+    public List<String> getIngredients() {
         return ingredients;
     }
 

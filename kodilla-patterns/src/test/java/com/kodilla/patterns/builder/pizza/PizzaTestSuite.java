@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PizzaTestSuite {
     @Test
-    public void testPizzaNew(){
+    public void testPizzaNew() {
         //Given
         Pizza pizza = new Pizza.PizzaBuilder()
                 .ingredient("Ham")

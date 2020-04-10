@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class DrawerTestSuite {
     @Test
-    public void testDoDrawingWithCircle(){
+    public void testDoDrawingWithCircle() {
         //Given
         Circle circle = new Circle();
         //When
@@ -17,7 +17,7 @@ public class DrawerTestSuite {
     }
 
     @Test
-    public void testDoDrawingWithTriangle(){
+    public void testDoDrawingWithTriangle() {
         //Given
         Triangle triangle = new Triangle();
         //When
